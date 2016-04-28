@@ -27,9 +27,11 @@
                         echo "<td>".$filas[$j]."</td>";
                     }
                     echo "<td>Editar</td>";
-                    echo "<td>Eliminar</td>";
+                        $link="almacen";
+                    echo "<td><a href='eliminar.php?a=$i&b=$eliminar_almacen&c=$link'>Eliminar </a></td>";
                 echo "</tr>";
-                    }
+                    }/*querido programador, cuando escribi este codigo, solo
+                Dios y yo sabiamos como funcioanaba, pero ahora solo Dios sabe, asi que buena suerte manteniendo el codigo, agrege un +1 al contador al final para saber cuantas horas se han perdido en este  codigo Fabian Cudis 2014*/
                 }
             ?>
         </table>

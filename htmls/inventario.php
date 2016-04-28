@@ -27,7 +27,8 @@
                         echo "<td>".$filas[$j]."</td>";
                     }
                     echo "<td>Editar</td>";
-                    echo "<td>Eliminar</td>";
+                    $link="inventario";
+                    echo "<td><a href='eliminar.php?a=$i&b=$eliminar_inventario&c=$link'>Eliminar </a></td>";
                 echo "</tr>";
                     }
                 }
