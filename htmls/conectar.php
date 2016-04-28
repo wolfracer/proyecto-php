@@ -12,6 +12,7 @@ $ventas_query="SELECT * FROM ventas";
 $inventario_query="SELECT * FROM inventario";
 $name_item_query="SELECT nombre FROM producto WHERE id_producto=";
 $precio_query="SELECT precio FROM producto WHERE id_producto=";
+$eliminar_query="UPDATE producto SET existencia=0 WHERE id_producto=";
 $conexion=mysqli_connect($host, $user, $pass, $nombre) OR DIE("No ha sido posible conectar a la tabla");
 if (mysqli_connect_errno()){
     echo "

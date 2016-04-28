@@ -29,7 +29,7 @@
                         echo "<td>".$filas[$j]."</td>";
                     }
                     echo "<td>Editar</td>";
-                    echo "<td>Eliminar</td>";
+                    echo "<td><a href='eliminar.php?a=$i'>Eliminar </a></td>";
                 echo "</tr>";
                    }
                 }
