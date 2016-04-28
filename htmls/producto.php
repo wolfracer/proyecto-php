@@ -29,7 +29,8 @@
                         echo "<td>".$filas[$j]."</td>";
                     }
                     echo "<td>Editar</td>";
-                    echo "<td><a href='eliminar.php?a=$i'>Eliminar </a></td>";
+                    $text="producto";
+                    echo "<td><a href='eliminar.php?a=$i&b=$eliminar_query&c=$text'>Eliminar </a></td>";
                 echo "</tr>";
                    }
                 }

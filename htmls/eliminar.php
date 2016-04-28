@@ -1,13 +1,15 @@
 <?php
 require 'conectar.php';
 $idx=$_GET['a'];
-function eliminar ($conexion, $elim_query, $id){
+$condicion=$_GET['b'];
+$link=$_GET['c'];
+function eliminar ($conexion, $elim_query, $id, $link){
     mysqli_query($conexion, $elim_query.$id);
     echo "<script languaje=\"javascript\"> alert (\"Eliminado exitosamente\")</script>";
 
- header('Location: producto.php');
+ header('Location:'.$link.'.php');
 }
-eliminar ($conexion, $eliminar_query, ($idx+1));
+eliminar ($conexion, $condicion, ($idx+1), $link);
 
 
 ?>
