@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inventario Fisico</title>
+	<link rel="stylesheet" type="text/css" href="htmls/style.css">
+</head>
+<body>
+    <section class="tabla">
+        <table>
+            <caption><h1>TABLAS MAESTRAS</h1></caption>
+            <tr> 
+                <th> <a href="htmls/producto.html"/><img src="imagenes/producto.jpg" alt="imagen" width="200" height="200" /> Productos </th> 
+                <th> <a href="htmls/almacen.html"/><img src="imagenes/almacen3.jpg" alt="imagen" width="200" height="200" /> Almacenes </th>  
+                <th> <a href="htmls/ventas.html"/><img src="imagenes/ventas.jpg" alt="imagen" width="200" height="200" /> <br>Ventas </th>
+                <th> <a href="htmls/inventario.html"/><img src="imagenes/inventario.jpg" alt="imagen" width="200" height="200" /> Inventario</th>
+            </tr>
+        </table>
+    </section>
+<?php
+require 'conectar.php';
+for ($i=0;$i<3;$i++){
+    $filas=consultar_producto($conexion, $product_query);
+    for ($j=0;$j<3;$j++){
+        echo $filas[$j]." ";
+        
+    }
+    echo "<br>";
+}
+
+?>
+</body>
+</html
