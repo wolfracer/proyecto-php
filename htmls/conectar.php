@@ -11,7 +11,7 @@ $almacen_query="SELECT * FROM almacen";
 $ventas_query="SELECT * FROM ventas";
 $inventario_query="SELECT * FROM inventario";
 $name_item_query="SELECT nombre FROM producto WHERE id_producto=";
-
+$precio_query="SELECT precio FROM producto WHERE id_producto=";
 $conexion=mysqli_connect($host, $user, $pass, $nombre) OR DIE("No ha sido posible conectar a la tabla");
 if (mysqli_connect_errno()){
     echo "
@@ -40,10 +40,10 @@ function cantidad_filas ($query){
     return $cant_registro;
 }
 
-function venta_nombre ($conexion, $id, $name_item_query) {
+function venta_nombre ($conexion, $id, $name_item) {
 
     global $name;
-    $name=mysqli_query($conexion, $name_item_query.$id);
+    $name=mysqli_query($conexion, $name_item.$id);
     $filan=mysqli_fetch_row($name);
     return $filan;
 

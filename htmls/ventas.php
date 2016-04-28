@@ -25,10 +25,12 @@
                 {
                     $filas=consulta_db($ventas);
                     echo "<tr>";
-                    for ($j=0;$j<5;$j++){
+                    for ($j=0;$j<4;$j++){
                         if ($j==2){
                            $nomb=venta_nombre($conexion, ($i+1), $name_item_query);
                             echo "<td>".$nomb[0]."</td>";
+                            $precio=venta_nombre($conexion,($i+1),$precio_query);
+                            echo "<td>".$precio[0]."</td>";
                         }
                         echo "<td>".$filas[$j]."</td>";
                     }
