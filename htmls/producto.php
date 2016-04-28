@@ -21,6 +21,9 @@
                 for($i=0;$i<cantidad_filas($producto);$i++)
                 {
                     $filas=consulta_db($producto);
+                    if ($filas[3]){
+
+
                     echo "<tr>";
                     for ($j=0;$j<3;$j++){
                         echo "<td>".$filas[$j]."</td>";
@@ -28,6 +31,7 @@
                     echo "<td>Editar</td>";
                     echo "<td>Eliminar</td>";
                 echo "</tr>";
+                   }
                 }
             ?>
         </table>
